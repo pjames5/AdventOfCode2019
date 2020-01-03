@@ -16,24 +16,14 @@ def part1():
     opcode_arr[2] = 2
 
     while code != 99:
-        # print('code: %s' % code)
-        # print('arr: %s' % opcode_arr[idx: idx + 4])
 
         # add
         if code == 1:
             opcode_arr[opcode_arr[idx + 3]] = opcode_arr[opcode_arr[idx + 1]] + opcode_arr[opcode_arr[idx + 2]]
-            # print('code1: %s %s %s %s' % (opcode_arr[opcode_arr[idx + 1]], opcode_arr[opcode_arr[idx + 2]],
-            #                               opcode_arr[opcode_arr[idx + 1]] + opcode_arr[opcode_arr[idx + 2]],
-            #                               opcode_arr[idx + 3]))
         # multiply
         elif code == 2:
             opcode_arr[opcode_arr[idx + 3]] = opcode_arr[opcode_arr[idx + 1]] * opcode_arr[opcode_arr[idx + 2]]
-            # print('code2: %s %s %s %s' % (opcode_arr[opcode_arr[idx + 1]], opcode_arr[opcode_arr[idx + 2]],
-            #                               opcode_arr[opcode_arr[idx + 1]] * opcode_arr[opcode_arr[idx + 2]],
-            #                               opcode_arr[idx + 3]))
         idx = idx + 4
-        # print('idx: %s' % idx)
-        # print('_arr: %s' % opcode_arr)
         code = opcode_arr[idx]
 
     print('part1: %s' % opcode_arr[0])
@@ -56,20 +46,14 @@ def part2():
             opcode_arr[2] = verb
 
             while code != 99:
-                # print('code: %s' % code)
-                # print('arr: %s' % opcode_arr[idx: idx + 4])
+
+                # add
                 if code == 1:
                     opcode_arr[opcode_arr[idx + 3]] = opcode_arr[opcode_arr[idx + 1]] + opcode_arr[opcode_arr[idx + 2]]
-                    # print('code1: %s %s %s %s' % (opcode_arr[opcode_arr[idx + 1]], opcode_arr[opcode_arr[idx + 2]],
-                    #                               opcode_arr[opcode_arr[idx + 1]] + opcode_arr[opcode_arr[idx + 2]],
-                    #                               opcode_arr[idx + 3]))
+                # multiply
                 elif code == 2:
                     opcode_arr[opcode_arr[idx + 3]] = opcode_arr[opcode_arr[idx + 1]] * opcode_arr[opcode_arr[idx + 2]]
-                    # print('code2: %s %s %s %s' % (opcode_arr[opcode_arr[idx + 1]], opcode_arr[opcode_arr[idx + 2]],
-                    #                               opcode_arr[opcode_arr[idx + 1]] * opcode_arr[opcode_arr[idx + 2]],
-                    #                               opcode_arr[idx + 3]))
                 idx = idx + 4
-                # print('idx: %s' % idx)
                 code = opcode_arr[idx]
 
             # exit condition
